@@ -7,16 +7,16 @@ public class ATM {
         handler.process(amount);
     }
     public static void main(String[] args) {
-        Handler handler6 = new Handler6();
-        Handler handler36 = new Handler36();
-        Handler handler72 = new Handler72();
-        handler72.setNextHandler(handler36);
-        handler36.setNextHandler(handler6);
+        Handler handler5 = new Handler5();
+        Handler handler25 = new Handler25();
+        Handler handler50 = new Handler50();
+        handler50.setNextHandler(handler25);
+        handler25.setNextHandler(handler5);
 
-        ATM.process(144, handler72);
+        ATM.process(100, handler50);
         System.out.println("---");
-        ATM.process(72, handler72);
+        ATM.process(80, handler50);
         System.out.println("---");
-        ATM.process(288, handler72);
+        ATM.process(60, handler50);
     }
 }
